@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content=device-width, initial-scale=1.0">
+<title>NutriSense – Smart Spoon of the Future</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===========================================================
+   GLOBAL STYLES — FUTURISTIC NEON + GLASS
+   =========================================================== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #031627, #000000 70%);
+    color: #e7faff;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 110px 10%;
+}
+
+/* Floating glass navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 18px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    z-index: 100;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #aef8ff;
+    margin: 0 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+.logo img {
+    height: 55px;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 180px;
+}
+
+.hero-text h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    color: #b8faff;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 15px 0 25px;
+}
+
+button {
+    padding: 14px 32px;
+    border: none;
+    background: linear-gradient(90deg, #00cfff, #0066ff);
+    color: white;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 12px #00eaff;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.hero img {
+    width: 420px;
+    filter: drop-shadow(0 0 25px #00eaff);
+}
+
+/* SECTION TITLES */
+h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00cfff;
+}
+
+/* GRID FEATURES */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 35px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,255,0.3);
+    border-radius: 18px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,255,255,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #00eaff;
+}
+
+/* DEMO */
+.demo-box {
+    width: 360px;
+    margin: auto;
+    padding: 25px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 18px;
+    border: 1px solid #00eaff;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,255,255,0.35);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 70px;
+    background: rgba(0,0,0,0.5);
+    border-top: 1px solid #00eaff;
+    color: #77eaff;
+    font-size: 0.95rem;
+}
+
+</style>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+function runDemo() {
+    document.getElementById("cal").textContent = "345 kcal";
+    document.getElementById("sugar").textContent = "4.2g – Safe";
+    document.getElementById("cont").textContent = "No Contamination";
+}
+</script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo"><img src="logo.png"></div>
+    <div>
+        <a onclick="scrollToSection('hero')">Home</a>
+        <a onclick="scrollToSection('problem')">Problem</a>
+        <a onclick="scrollToSection('solution')">Solution</a>
+        <a onclick="scrollToSection('features')">Features</a>
+        <a onclick="scrollToSection('technology')">Tech</a>
+        <a onclick="scrollToSection('demo')">Demo</a>
+        <a onclick="scrollToSection('business')">Business</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-text">
+        <h1>NutriSense<br>The Future of Safe Eating</h1>
+        <p>The world’s first AI-powered smart spoon that scans food, detects contamination, and analyzes nutrition instantly.</p>
+        <button onclick="scrollToSection('solution')">Explore NutriSense</button>
+    </div>
+    <img src="spoon.png">
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+    <h2>The Problem</h2>
+    <p style="text-align:center;max-width:700px;margin:auto;">
+        Today, we eat blindly — contaminated oil, hidden sugar, unsafe ingredients, allergens, and chemicals.  
+        NutriSense solves this with real-time scanning.
+    </p>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+    <h2>The Solution</h2>
+    <p style="text-align:center;max-width:700px;margin:auto;">
+        NutriSense Smart Spoon uses AI Vision + Nano Sensors to read food instantly and display a full health analysis.
+    </p>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+    <h2>Features</h2>
+    <div class="grid">
+        <div class="card">AI Food Recognition</div>
+        <div class="card">Real-Time Nutrition Scan</div>
+        <div class="card">Allergen Detection</div>
+        <div class="card">Oil Quality Check</div>
+        <div class="card">Food Contamination Alert</div>
+        <div class="card">Smart Health Recommendations</div>
+    </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+    <h2>The Technology Behind NutriSense</h2>
+    <div class="grid">
+        <div class="card">AI Vision System</div>
+        <div class="card">Near-Infrared Sensors</div>
+        <div class="card">Nano Biosensors</div>
+        <div class="card">Cloud Health AI</div>
+        <div class="card">IoT Sync</div>
+        <div class="card">Predictive Data Model</div>
+    </div>
+</section>
+
+<!-- USERS -->
+<section id="users">
+    <h2>Who Is It For?</h2>
+    <div class="grid">
+        <div class="card">Diabetic Patients</div>
+        <div class="card">Health Conscious People</div>
+        <div class="card">Restaurants & Chefs</div>
+        <div class="card">Travelers</div>
+        <div class="card">Hospitals</div>
+        <div class="card">Athletes</div>
+    </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo">
+    <h2>Live Demo</h2>
+    <div class="demo-box">
+        <p>Calories: <span id="cal">--</span></p>
+        <p>Sugar Level: <span id="sugar">--</span></p>
+        <p>Contamination: <span id="cont">--</span></p>
+        <button onclick="runDemo()">Run Scan</button>
+    </div>
+</section>
+
+<!-- BUSINESS MODEL -->
+<section id="business">
+    <h2>Business Model</h2>
+    <div class="grid">
+        <div class="card">Product Sales</div>
+        <div class="card">Subscription App</div>
+        <div class="card">Health Analytics</div>
+        <div class="card">Restaurant Partnerships</div>
+        <div class="card">Medical Sector Use</div>
+        <div class="card">Future Expansions</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 NutriSense — Designed for the Future of Smart Eating
+</footer>
+
+</body>
+</html>

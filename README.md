@@ -1,830 +1,375 @@
-🥄 NutriSense Spoon
+<div align="center">
 
-AI-Powered Food Intelligence Platform
+# 🥄 NutriSense Spoon
 
-«From what you eat → to what it means for you.»
+### AI-Powered Food Intelligence Platform
 
-<div align="center"><img src="nutrisense-spoon-web-main/web/logo.png" alt="NutriSense Spoon Logo" width="120"/><br><br>
+**Understand your food. Understand your nutrition.**
 
-""Status" (https://img.shields.io/badge/Status-Early%20Prototype-111827?style=flat-square)"
-""React" (https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=111827)"
-""TypeScript" (https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)"
-""Vite" (https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)"
-""Tailwind CSS" (https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)"
+<img src="nutrisense-spoon-web-main/web/logo.png" alt="NutriSense Spoon Logo" width="110"/>
 
-<br><br>
+<br>
 
-"🌐 View Live Prototype" (https://nutrisense-spoon.lovable.app)
+[![Status](https://img.shields.io/badge/Status-Early%20Prototype-yellow?style=flat-square)]()
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square\&logo=react)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white)]()
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square\&logo=vite\&logoColor=white)]()
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square\&logo=tailwindcss\&logoColor=white)]()
 
-</div>---
+<br>
 
-📖 Overview
+**[🌐 Live Prototype](https://nutrisense-spoon.lovable.app)** ·
+**[💻 GitHub Repository](https://github.com/Abiya-Daniel/nutrisense-spoon-web)**
 
-NutriSense Spoon is an early-stage AI-powered food intelligence platform designed to make everyday nutrition understanding simpler, faster, and more personalized.
-
-Traditional nutrition applications often require users to search for individual foods, select database entries, estimate portions, and manually record every meal. This becomes particularly difficult when dealing with homemade meals, mixed dishes, regional cuisines, and culturally diverse foods.
-
-NutriSense Spoon explores a different approach:
-
-Capture
-   ↓
-Understand
-   ↓
-Analyze
-   ↓
-Personalize
-   ↓
-Act
-
-The initial product direction focuses on the Indian food ecosystem, with a long-term vision of developing a broader food intelligence platform.
+</div>
 
 ---
 
-🎯 Vision
+## 📌 Overview
 
-Make food understandable.
+**NutriSense Spoon** is an early-stage **AI-powered food intelligence platform** designed to simplify the way people understand their meals and nutrition.
 
-People make decisions about food every day, but understanding the nutritional meaning of a real meal can still require significant manual effort.
+Instead of relying entirely on manual food logging, NutriSense Spoon explores an intelligent workflow that can understand a real meal, estimate its nutritional composition, and provide personalized insights.
 
-NutriSense Spoon aims to move nutrition technology from:
+> **From what you eat → to what it means for you.**
 
-«Manual food logging»
-
-toward:
-
-«Intelligent food understanding.»
-
-The long-term vision is to create a food intelligence layer connecting:
-
-                         FOOD
-                           │
-                           ▼
-                  FOOD INTELLIGENCE
-                           │
-             ┌─────────────┼─────────────┐
-             ▼             ▼             ▼
-         Nutrition       Context       Patterns
-             │             │             │
-             └─────────────┼─────────────┘
-                           ▼
-                    Personalization
-                           │
-                           ▼
-                    Actionable Insight
-                           │
-                           ▼
-                    Better Decisions
+The initial product direction is **India-first**, focusing on the complexity of homemade meals, regional cuisines, mixed dishes, and diverse preparation methods.
 
 ---
 
-🚨 The Problem
+## 🚨 The Problem
 
-Nutrition tracking is still too manual
+Most nutrition tracking systems depend on users manually:
 
-Many existing nutrition workflows depend on users manually:
+* Searching for food items
+* Selecting database entries
+* Estimating portions
+* Entering quantities
+* Logging every meal
 
-- Searching for food items
-- Selecting database entries
-- Estimating serving sizes
-- Entering quantities
-- Logging individual meal components
-- Repeating the process for every meal
+This becomes difficult when dealing with:
 
-This creates friction and can make consistent tracking difficult.
+**Homemade food · Mixed dishes · Regional cuisines · Unstandardized portions · Recipe variations**
 
-The challenge becomes greater with:
+For example, understanding a Kerala-style meal is not simply identifying *rice, avial, sambar, thoran, fish curry,* and *curd*.
 
-- 🍛 Homemade meals
-- 🥘 Mixed dishes
-- 🌾 Regional cuisines
-- 🥄 Unstandardized portions
-- 👩‍🍳 Different preparation methods
-- 🧂 Recipe variations
+The system needs to understand:
 
-For example, a typical Kerala-style meal may contain:
+```text
+Food → Ingredients → Preparation → Portion → Nutrition → Context
+```
 
-                    MEAL
-                      │
-          ┌───────────┼───────────┐
-          ▼           ▼           ▼
-        Rice        Avial       Sambar
-          │           │           │
-          └───────────┼───────────┘
-                      │
-              ┌───────┼───────┐
-              ▼       ▼       ▼
-           Thoran    Fish    Curd
-                     Curry
+### The Core Problem
 
-The challenge is not simply recognizing individual foods.
-
-The deeper challenge is understanding:
-
-What is present
-      ↓
-How it is prepared
-      ↓
-How much is present
-      ↓
-What nutrients it contains
-      ↓
-What it means in the user's context
-
-The fundamental gap
-
-«People eat real meals. Nutrition systems often expect structured database entries.»
-
-NutriSense Spoon aims to bridge this gap.
+> **People eat real meals. Most nutrition systems expect structured database entries.**
 
 ---
 
-💡 The Solution
+## 💡 The Solution
 
-NutriSense Spoon is being designed as an intelligent layer between a user's meal and meaningful nutrition information.
+NutriSense Spoon aims to create an intelligent layer between **food and nutrition understanding**.
 
-                         MEAL
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │   CAPTURE   │
-                    └──────┬──────┘
-                           │
-                           ▼
-                 ┌────────────────────┐
-                 │ FOOD UNDERSTANDING  │
-                 └─────────┬──────────┘
-                           │
-              ┌────────────┼────────────┐
-              ▼            ▼            ▼
-          Food Identity  Portion      Context
-                         Estimate   Understanding
-              │            │            │
-              └────────────┼────────────┘
-                           ▼
-                 ┌────────────────────┐
-                 │  NUTRITION ENGINE  │
-                 └─────────┬──────────┘
-                           │
-                           ▼
-                 ┌────────────────────┐
-                 │ PERSONAL CONTEXT   │
-                 └─────────┬──────────┘
-                           │
-                           ▼
-                 ┌────────────────────┐
-                 │ ACTIONABLE INSIGHT │
-                 └────────────────────┘
-
-The product direction is therefore broader than simple calorie tracking.
-
----
-
-🧠 Food Intelligence
-
-Traditional nutrition tracking primarily asks:
-
-«How many calories did I consume?»
-
-Food intelligence aims to answer a broader set of questions:
-
-«What did I eat?»
-
-«How much did I eat?»
-
-«What is it made of?»
-
-«How was it prepared?»
-
-«What nutrients does it provide?»
-
-«What does it mean in my personal context?»
-
-This distinction is the foundation of the NutriSense Spoon product thesis.
-
----
-
-🇮🇳 India-First Food Intelligence
-
-India represents an interesting starting point because of its highly diverse food ecosystem.
-
-Food can vary significantly by:
-
-- Region
-- Culture
-- Household
-- Ingredients
-- Recipe
-- Cooking method
-- Serving style
-- Portion size
-
-A meal that appears to be the same dish can have substantially different ingredients and nutritional characteristics depending on how it is prepared.
-
-Initial Market
-
-India
-
-Long-Term Opportunity
-
-Global Food Intelligence
-
-The initial focus is intended to provide a strong foundation for understanding complex regional meals before expanding to broader cuisines and markets.
-
----
-
-🔬 Product Intelligence
-
-NutriSense Spoon is being developed around five core intelligence layers.
-
-1. 🍽️ Food Understanding
-
-Understand food within real-world meal contexts.
-
-Potential capabilities include:
-
-- Food recognition
-- Meal composition analysis
-- Ingredient identification
-- Regional food understanding
-- Mixed-dish understanding
-- Cuisine recognition
-
----
-
-2. 🥄 Portion Intelligence
-
-Estimate approximate serving quantities using available visual and contextual information.
-
-The system should communicate uncertainty clearly rather than presenting estimates as precise measurements.
-
----
-
-3. 📊 Nutrition Intelligence
-
-Translate recognized foods and estimated portions into useful nutritional information.
-
-Potential outputs include:
-
-- Energy
-- Protein
-- Carbohydrates
-- Fat
-- Fiber
-- Selected micronutrients
-
----
-
-4. 👤 Personal Intelligence
-
-Nutrition requirements and goals differ between individuals.
-
-Future personalization may consider:
-
-- User goals
-- Dietary preferences
-- Food preferences
-- Eating patterns
-- Historical nutrition information
-
----
-
-5. 💡 Action Intelligence
-
-The objective is not simply to produce another dashboard of numbers.
-
-The intended progression is:
-
-Information
-    ↓
-Understanding
-    ↓
-Personal Context
-    ↓
-Actionable Insight
-    ↓
-Better Decision
-
----
-
-📱 Product Experience
-
-The intended product experience is designed around a simple workflow.
-
-Step 1 — Capture
-
-📸 Capture or upload a meal.
-
-Step 2 — Understand
-
-🧠 Interpret the food and meal composition.
-
-Step 3 — Analyze
-
-📊 Estimate nutritional information based on recognized foods and portions.
-
-Step 4 — Personalize
-
-👤 Apply relevant user goals and preferences.
-
-Step 5 — Act
-
-💡 Present understandable and actionable insights.
-
-CAPTURE
-   ↓
-UNDERSTAND
-   ↓
-ANALYZE
-   ↓
-PERSONALIZE
-   ↓
-ACT
-
----
-
-✨ Core Product Capabilities
-
-📸 AI Meal Understanding
-
-Explore computer-vision and multimodal AI approaches for identifying food and understanding meal composition.
-
-🥄 Portion Intelligence
-
-Estimate approximate quantities while communicating uncertainty.
-
-📊 Nutrition Intelligence
-
-Generate nutritional estimates from recognized foods and portions.
-
-👤 Personalized Nutrition
-
-Interpret nutrition information according to user goals and preferences.
-
-📈 Nutrition Trends
-
-Identify patterns across meals, days, and longer periods.
-
-🍽️ Intelligent Meal Planning
-
-Future capability for generating personalized meal suggestions based on nutrition goals and preferences.
-
-🛒 Grocery Intelligence
-
-Future capability connecting nutrition goals with grocery planning and food availability.
-
-🧑‍⚕️ Professional Tools
-
-Future tools for nutritionists, dietitians, fitness professionals, and wellness coaches.
-
-🔌 Food Intelligence API
-
-Long-term platform capability for allowing external applications to integrate food-understanding and nutrition-intelligence features.
-
----
-
-🎯 Target Users
-
-👤 Consumers
-
-People who want a simpler way to understand their everyday food and nutrition.
-
-🧑‍⚕️ Nutrition Professionals
-
-Potential tools for:
-
-- Nutritionists
-- Dietitians
-- Fitness professionals
-- Wellness coaches
-
-🏋️ Fitness & Wellness Platforms
-
-Platforms seeking intelligent food and nutrition capabilities.
-
-🍽️ Food Businesses
-
-Potential applications for restaurants and food businesses seeking richer nutrition experiences.
-
-🏫 Institutions
-
-Potential applications across:
-
-- Colleges
-- Hostels
-- Cafeterias
-- Institutional food programs
-
-🏢 Corporate Wellness
-
-Potential nutrition and wellness applications for organizations.
-
-🔌 Technology Platforms
-
-Future integrations through APIs and platform partnerships.
-
----
-
-⭐ What Makes NutriSense Spoon Different?
-
-NutriSense Spoon is not intended to be positioned as another generic calorie tracker.
-
-The differentiation is centered around food understanding.
-
-Traditional Approach| NutriSense Spoon Direction
-Manual food entry| Low-friction meal capture
-Individual database items| Whole-meal understanding
-Standardized food records| Real-world food context
-Nutrition numbers| Nutrition intelligence
-Generic information| Personal context
-Tracking-focused| Understanding-focused
-Global-first opportunity| India-first opportunity
-
-Strategic Wedge
-
-«AI-powered understanding of complex Indian meals.»
-
-The long-term opportunity is to expand from this focused problem toward a broader food intelligence platform.
-
----
-
-🏆 Competitive Positioning
-
-The nutrition technology ecosystem includes products focused on areas such as:
-
-- Calorie tracking
-- Food databases
-- Recipe tracking
-- Fitness nutrition
-- Wellness
-- Meal planning
-
-NutriSense Spoon aims to operate at a different layer:
-
-                         FOOD
-                           │
-                           ▼
-                  FOOD INTELLIGENCE
-                           │
-             ┌─────────────┼─────────────┐
-             ▼             ▼             ▼
-         Nutrition       Context       Patterns
-             │             │             │
-             └─────────────┼─────────────┘
-                           ▼
-                    Personalization
-                           │
-                           ▼
-                         Action
-
-Positioning Statement
-
-«We are not trying to build another food diary.
-
-We are building toward a system that understands food.»
-
----
-
-📈 Market Entry Strategy
-
-NutriSense Spoon follows a focused expansion strategy.
-
-                         INDIA
-                           │
-                           ▼
-                Indian Food Intelligence
-                           │
-                           ▼
-                    Consumer Product
-                           │
-                           ▼
-                  Personalization Layer
-                           │
-              ┌────────────┼────────────┐
-              ▼            ▼            ▼
-          Fitness       Wellness     Nutrition
-              │            │            │
-              └────────────┼────────────┘
-                           ▼
-                      B2B Platform
-                           │
-                           ▼
-                  Food Intelligence API
-                           │
-                           ▼
-                    Global Expansion
-
-The strategy is to first solve a difficult food-understanding problem deeply, validate the product, and then expand into adjacent markets.
-
----
-
-💰 Business Model
-
-NutriSense Spoon is designed with a potential multi-layer revenue model.
-
-B2C — Freemium
-
-A free core product with potential premium capabilities such as:
-
-- Advanced meal analysis
-- Personalization
-- Long-term nutrition insights
-- Intelligent recommendations
-
-Professional SaaS
-
-Potential subscription-based tools for:
-
-- Nutritionists
-- Dietitians
-- Fitness professionals
-- Wellness coaches
-
-B2B
-
-Potential solutions for:
-
-- Fitness platforms
-- Wellness companies
-- Food businesses
-- Institutions
-- Corporate wellness programs
-
-Food Intelligence API
-
-A long-term opportunity to provide food-understanding capabilities to third-party applications and platforms.
-
-Business Model Evolution
-
-Consumer Product
-       ↓
-Premium Subscription
-       ↓
-Professional SaaS
-       ↓
-B2B Integrations
-       ↓
-Food Intelligence API
-
----
-
-🏰 Long-Term Competitive Advantage
-
-NutriSense Spoon aims to build defensibility through several layers.
-
-Specialized Food Intelligence
-
-Develop deeper understanding of:
-
-- Regional foods
-- Ingredients
-- Preparation methods
-- Meal compositions
-- Cuisine-specific variations
-
-Food Knowledge Layer
-
-Build structured relationships between:
-
-Food
- ↓
-Ingredients
- ↓
-Preparation
- ↓
-Cuisine
- ↓
-Nutrition
- ↓
-Meal
- ↓
-User Context
-
-Feedback Loops
-
-User corrections and interactions could help improve food understanding over time.
-
-Personalization
-
-The product can become increasingly useful as it learns a user's preferences and eating patterns.
-
-Ecosystem
-
-Future integrations with:
-
-- Nutrition professionals
-- Fitness platforms
-- Restaurants
-- Institutions
-- Technology companies
-
-could create additional distribution opportunities.
-
----
-
-🛡️ Responsible AI & Privacy
-
-Nutrition information can influence personal health and lifestyle decisions.
-
-NutriSense Spoon is therefore intended to follow a responsible and privacy-conscious product philosophy.
-
-Principles
-
-- Transparent estimates
-- Confidence-aware results
-- Clear distinction between estimates and verified measurements
-- User control over personal information
-- Responsible data handling
-- Minimal unnecessary data collection
-- Human-professional oversight where appropriate
-
-«NutriSense Spoon is intended to support nutrition awareness and informed decision-making. It is not intended to replace qualified healthcare or nutrition professionals.»
-
----
-
-🚀 Product Roadmap
-
-Phase 1 — Foundation
-
-Current
-
-- Product concept
-- Responsive web application
-- Nutrition-focused interface
-- Initial product flows
-- Prototype validation
-
-↓
-
-Phase 2 — Food Intelligence
-
-Planned
-
-- Meal image analysis
-- Food recognition
-- Indian food dataset
-- Ingredient understanding
-- Portion estimation
-- Nutrition estimation
-
-↓
-
-Phase 3 — Personal Intelligence
-
-Planned
-
-- User nutrition profiles
-- Meal history
-- Nutrition trends
-- Personalized insights
-- Intelligent meal recommendations
-
-↓
-
-Phase 4 — Ecosystem
-
-Planned
-
-- Nutritionist dashboard
-- Fitness integrations
-- Restaurant integrations
-- Institutional applications
-- Wellness partnerships
-
-↓
-
-Phase 5 — Food Intelligence Platform
-
-Long-term
-
-- Food Intelligence API
-- Enterprise integrations
-- Global cuisine intelligence
-- Food knowledge graph
-- Developer ecosystem
-
----
-
-🧪 Current Project Status
-
-🟡 Early Prototype / MVP
-
-The current repository represents the initial NutriSense Spoon product experience and frontend foundation.
-
-Currently Implemented
-
-- Responsive web application
-- Nutrition-focused user experience
-- Interactive frontend
-- Modern component architecture
-- Desktop and mobile layouts
-
-Development Direction
-
-The project is being developed toward:
-
-- AI meal understanding
-- Food recognition
-- Portion intelligence
-- Indian food intelligence
-- Nutrition estimation
-- Personalization
-- Recommendation systems
-- Professional tools
-- B2B integrations
-
-«Important: Planned capabilities described in this README are product directions and are not necessarily implemented in the current repository.»
-
----
-
-📸 Product Preview
-
-<div align="center"><img src="nutrisense-spoon-web-main/web/spoon.png"
-width="900"
-alt="NutriSense Spoon Product Preview"/>
-
-</div>---
-
-🌐 Live Prototype
-
-<div align="center">🚀 "Open NutriSense Spoon" (https://nutrisense-spoon.lovable.app)
-
-</div>---
-
-🛠️ Technology Stack
-
-<div align="center"><img src="https://skillicons.dev/icons?i=react,typescript,vite,tailwind,nodejs,npm,git,github" alt="Technology Stack"/></div>Technology| Purpose
-React| Frontend application
-TypeScript| Type-safe development
-Vite| Development and build tooling
-Tailwind CSS| Interface styling
-Node.js| Runtime environment
-npm| Package management
-Git| Version control
-GitHub| Source-code collaboration
-
-Future Technology Direction
-
-The intelligence layer may incorporate:
-
-- Computer Vision
-- Multimodal AI
-- Machine Learning
-- Nutrition databases
-- Food knowledge graphs
-- Recommendation systems
-- Personalization models
-- Secure cloud infrastructure
-- API services
-
-Technology decisions will be guided by:
-
-«Accuracy · Scalability · Cost · Privacy · Performance · User Experience»
-
----
-
-🏗️ Product Architecture Direction
-
-The long-term architecture is envisioned as:
-
-┌──────────────────────┐
-│      MEAL INPUT      │
-└──────────┬───────────┘
+```text
+        📸 MEAL
            │
            ▼
-┌──────────────────────┐
-│ FOOD UNDERSTANDING   │
-└──────────┬───────────┘
+   ┌───────────────┐
+   │ Food Analysis │
+   └───────┬───────┘
            │
      ┌─────┼─────┐
      ▼     ▼     ▼
-   Food  Ingredient  Preparation
- Identity Understanding Understanding
+    Food Portion Context
+    ID     Est.   Analysis
      │     │     │
      └─────┼─────┘
            ▼
-┌──────────────────────┐
-│ PORTION INTELLIGENCE │
-└──────────┬───────────┘
+   ┌───────────────┐
+   │   Nutrition   │
+   │    Engine     │
+   └───────┬───────┘
            │
            ▼
-┌──────────────────────┐
-│  NUTRITION ENGINE    │
-└──────────┬───────────┘
+   ┌───────────────┐
+   │ Personalization│
+   └───────┬───────┘
            │
            ▼
-┌──────────────────────┐
-│   PERSONALIZATION    │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ ACTIONABLE INSIGHT   │
-└──────────────────────┘
+   💡 Actionable Insight
+```
+
+The goal is to move from:
+
+**Manual Tracking → Intelligent Food Understanding**
 
 ---
 
-📂 Repository Structure
+## 🧠 Product Intelligence
 
+NutriSense Spoon is built around five intelligence layers:
+
+| Layer                         | Purpose                                                   |
+| ----------------------------- | --------------------------------------------------------- |
+| 🍽️ **Food Understanding**    | Identify foods, ingredients, dishes, and meal composition |
+| 🥄 **Portion Intelligence**   | Estimate approximate serving quantities                   |
+| 📊 **Nutrition Intelligence** | Translate food and portions into nutritional information  |
+| 👤 **Personal Intelligence**  | Consider goals, preferences, and eating patterns          |
+| 💡 **Action Intelligence**    | Convert nutrition data into understandable insights       |
+
+---
+
+## ✨ Key Features
+
+### 📸 AI Meal Understanding
+
+Analyze real-world meals and identify food components.
+
+### 🥄 Portion Intelligence
+
+Estimate approximate portions while communicating uncertainty.
+
+### 📊 Nutrition Analysis
+
+Provide nutritional estimates such as:
+
+* Calories
+* Protein
+* Carbohydrates
+* Fat
+* Fiber
+* Selected micronutrients
+
+### 👤 Personalized Nutrition
+
+Adapt insights according to individual goals and preferences.
+
+### 📈 Nutrition Trends
+
+Track and understand nutrition patterns over time.
+
+### 🍽️ Intelligent Meal Planning
+
+Future capability for personalized meal recommendations.
+
+### 🛒 Grocery Intelligence
+
+Future capability connecting nutrition goals with grocery planning.
+
+### 🧑‍⚕️ Professional Tools
+
+Future tools for nutritionists, dietitians, fitness professionals, and wellness coaches.
+
+### 🔌 Food Intelligence API
+
+Long-term platform capability for integrating food intelligence into external applications.
+
+---
+
+## 🇮🇳 India-First Approach
+
+India is the initial focus because of its highly diverse food ecosystem.
+
+Food can vary by:
+
+* Region
+* Culture
+* Household
+* Ingredients
+* Cooking method
+* Recipe
+* Portion size
+
+### Strategic Wedge
+
+> **AI-powered understanding of complex Indian meals.**
+
+The long-term vision is to expand from Indian food intelligence toward **global food intelligence**.
+
+---
+
+## ⭐ What Makes NutriSense Spoon Different?
+
+| Traditional Nutrition Apps | NutriSense Spoon         |
+| -------------------------- | ------------------------ |
+| Manual food entry          | Intelligent meal capture |
+| Individual food records    | Whole-meal understanding |
+| Standardized database      | Real-world food context  |
+| Nutrition numbers          | Nutrition intelligence   |
+| Generic information        | Personalized insights    |
+| Tracking-focused           | Understanding-focused    |
+| Global-first               | India-first              |
+
+### Product Thesis
+
+> **We are not building another food diary.**
+>
+> **We are building toward a system that understands food.**
+
+---
+
+## 🏗️ Architecture
+
+The long-term product architecture is envisioned as:
+
+```text
+┌──────────────────────┐
+│      MEAL INPUT      │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ FOOD UNDERSTANDING   │
+└──────────┬───────────┘
+           ↓
+┌─────────────────────────────┐
+│ Food · Ingredients · Recipe │
+│ Preparation · Cuisine       │
+└──────────┬──────────────────┘
+           ↓
+┌──────────────────────┐
+│ PORTION INTELLIGENCE │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│  NUTRITION ENGINE    │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│   PERSONALIZATION    │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ ACTIONABLE INSIGHT   │
+└──────────────────────┘
+```
+
+---
+
+## 🚀 Product Roadmap
+
+```text
+Phase 1
+Foundation
+   ↓
+Phase 2
+Food Intelligence
+   ↓
+Phase 3
+Personal Intelligence
+   ↓
+Phase 4
+Ecosystem
+   ↓
+Phase 5
+Food Intelligence Platform
+```
+
+### Phase 1 — Foundation
+
+* Responsive web application
+* Nutrition-focused UI
+* Core product flows
+* Prototype validation
+
+### Phase 2 — Food Intelligence
+
+* Meal image analysis
+* Food recognition
+* Indian food dataset
+* Ingredient understanding
+* Portion estimation
+* Nutrition estimation
+
+### Phase 3 — Personal Intelligence
+
+* User profiles
+* Meal history
+* Nutrition trends
+* Personalized insights
+* Meal recommendations
+
+### Phase 4 — Ecosystem
+
+* Nutritionist dashboard
+* Fitness integrations
+* Restaurant integrations
+* Institutional applications
+* Wellness partnerships
+
+### Phase 5 — Platform
+
+* Food Intelligence API
+* Enterprise integrations
+* Global cuisine intelligence
+* Food knowledge graph
+* Developer ecosystem
+
+---
+
+## 🧪 Current Status
+
+### 🟡 Early Prototype
+
+The current repository focuses on the **frontend experience and product foundation**.
+
+### Currently Available
+
+* Responsive web interface
+* Nutrition-focused experience
+* Interactive UI
+* Modern component architecture
+* Desktop and mobile layouts
+
+### Under Development / Planned
+
+* AI meal understanding
+* Food recognition
+* Portion intelligence
+* Indian food intelligence
+* Nutrition estimation
+* Personalization
+* Recommendation systems
+* Professional tools
+* B2B integrations
+
+> **Note:** Planned features are part of the product roadmap and are not necessarily implemented in the current prototype.
+
+---
+
+## 📸 Product Preview
+
+<div align="center">
+
+<img src="nutrisense-spoon-web-main/web/spoon.png"
+  width="850"
+  alt="NutriSense Spoon Product Preview"/>
+
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology       | Role                              |
+| ---------------- | --------------------------------- |
+| **React**        | Frontend framework                |
+| **TypeScript**   | Type-safe development             |
+| **Vite**         | Build tool and development server |
+| **Tailwind CSS** | Styling and responsive UI         |
+| **Node.js**      | Runtime environment               |
+| **npm**          | Package management                |
+| **Git & GitHub** | Version control                   |
+
+### Future Intelligence Stack
+
+The platform may evolve using:
+
+**Computer Vision · Multimodal AI · Machine Learning · Nutrition Databases · Knowledge Graphs · Recommendation Systems · Cloud APIs**
+
+---
+
+## 📂 Project Structure
+
+```text
 nutrisense-spoon-web/
 │
 ├── public/
@@ -833,7 +378,7 @@ nutrisense-spoon-web/
 │   ├── logo.png
 │   └── spoon.png
 │
-├── .gitignore
+├── index.html
 ├── package.json
 ├── package-lock.json
 ├── vite.config.ts
@@ -841,70 +386,148 @@ nutrisense-spoon-web/
 ├── tsconfig.json
 ├── postcss.config.js
 ├── eslint.config.js
-├── index.html
+├── .gitignore
 └── README.md
-
-«The structure above reflects the expected project organization. Update it if the repository structure changes.»
+```
 
 ---
 
-🚀 Getting Started
+## 🚀 Getting Started
 
-Prerequisites
+### Prerequisites
 
-Make sure the following are installed:
+* Node.js
+* npm
+* Git
 
-- "Node.js" (https://nodejs.org/)
-- npm
-- Git
+### Clone
 
-1. Clone the Repository
-
+```bash
 git clone https://github.com/Abiya-Daniel/nutrisense-spoon-web.git
-
-2. Navigate to the Project
-
 cd nutrisense-spoon-web
+```
 
-3. Install Dependencies
+### Install Dependencies
 
+```bash
 npm install
+```
 
-4. Start the Development Server
+### Run Development Server
 
+```bash
 npm run dev
+```
 
-The application will typically be available at:
+Open:
 
+```text
 http://localhost:5173
+```
 
----
+### Build for Production
 
-📦 Production Build
-
-Create an optimized production build:
-
+```bash
 npm run build
+```
 
----
+### Preview Production Build
 
-👀 Preview Production Build
-
-Preview the production build locally:
-
+```bash
 npm run preview
+```
 
 ---
 
-🤝 Contributing
+## 💰 Future Business Model
 
-NutriSense Spoon is an evolving project exploring the intersection of:
+NutriSense Spoon has the potential to evolve across multiple revenue layers:
 
-- Artificial Intelligence
-- Computer Vision
-- Nutrition Technology
-- Food Intelligence
-- Personalization
-- Human-centered product design
+```text
+B2C Freemium
+      ↓
+Premium Subscription
+      ↓
+Professional SaaS
+      ↓
+B2B Integrations
+      ↓
+Food Intelligence API
+```
 
-Contributions, ideas, discussions, and improvements are welcome as the project evolves
+Potential customers include:
+
+**Consumers · Nutrition Professionals · Fitness Platforms · Wellness Companies · Food Businesses · Institutions · Corporate Wellness**
+
+---
+
+## 🛡️ Responsible AI & Privacy
+
+Nutrition information can influence personal health decisions. NutriSense Spoon is therefore designed around responsible technology principles:
+
+* Transparent estimates
+* Confidence-aware results
+* Clear distinction between estimates and measurements
+* Privacy-conscious data handling
+* User control over personal information
+* Minimal unnecessary data collection
+* Professional oversight where appropriate
+
+> NutriSense Spoon is intended to support nutrition awareness and informed decision-making, not replace qualified healthcare or nutrition professionals.
+
+---
+
+## 🔮 Long-Term Vision
+
+The long-term ambition is to build a **Food Intelligence Layer** connecting food with context, nutrition, personalization, and action.
+
+```text
+                       FOOD
+                         ↓
+                FOOD INTELLIGENCE
+                         ↓
+          ┌──────────────┼──────────────┐
+          ↓              ↓              ↓
+      NUTRITION       CONTEXT        PATTERNS
+          └──────────────┼──────────────┘
+                         ↓
+                  PERSONALIZATION
+                         ↓
+                ACTIONABLE INSIGHT
+                         ↓
+                  BETTER DECISIONS
+```
+
+Ultimately:
+
+> **NutriSense Spoon aims to make food understandable.**
+
+---
+
+## 👨‍💻 Founder
+
+**Abiya Daniel**
+Computer Science & Engineering
+College of Engineering Perumon, Kerala, India
+
+---
+
+## 📄 Disclaimer
+
+NutriSense Spoon is currently an **early-stage prototype**. Features described as planned or future capabilities may not be available in the current version.
+
+Any future nutritional estimates should be considered informational estimates and not medical advice, diagnosis, or a replacement for qualified professional guidance.
+
+---
+
+<div align="center">
+
+# 🥄 NutriSense Spoon
+
+### **Understand your food. Understand your nutrition.**
+
+**From what you eat → to what it means for you.**
+
+⭐ *Building toward intelligent food understanding, one meal at a time.*
+
+</div>
